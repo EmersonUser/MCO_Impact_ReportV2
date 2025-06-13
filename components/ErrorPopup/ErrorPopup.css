@@ -1,0 +1,160 @@
+/* Error Table Container */
+.error-table-container {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Custom Table */
+.custom-error-table {
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Table Header */
+.custom-error-table thead {
+  background: #d32f2f;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Row Number */
+.row-number {
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Column Name and Error Description */
+.column-name,
+.error-description {
+  padding: 8px;
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+/* No Errors Found Row */
+.no-errors {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Custom Alert */
+.custom-alert {
+  border-radius: 6px;
+  font-size: 13px;
+  background: rgba(211, 47, 47, 0.1);
+  padding: 8px;
+  color: #d32f2f;
+  margin-bottom: 16px;
+}
+
+.error-popup-container {
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+
+.table-wrapper {
+  height: calc(80vh - 120px);
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+/* Static Header */
+.static-header {
+  display: flex;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  padding: 12px 0;
+}
+
+.header-cell {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-right: 1px solid #e0e0e0;
+  color: #212529;
+}
+
+.row-number {
+  width: 15%;
+  justify-content: center;
+}
+
+.column-name {
+  width: 25%;
+}
+
+.error-desc {
+  width: 60%;
+  border-right: none;
+}
+
+.table-container {
+  height: calc(100% - 45px);
+}
+
+.table-row {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #dee2e6;
+  padding: 8px 0;
+  min-height: 50px;
+  height: auto !important;
+}
+
+/* Table Content */
+.table-content {
+  height: 300px; /* Fixed height for table content */
+}
+
+/* Cell Styles */
+.table-cell {
+  border-right: 1px solid #e0e0e0;
+  padding: 8px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-items: flex-start;
+}
+
+/* .cell-content {
+  padding: 8px 16px;
+  line-height: 1.5;
+} */
+
+.center-aligned {
+  text-align: center;
+}
+
+/* ReactVirtualized overrides */
+.ReactVirtualized__Table__row {
+  display: flex !important;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ReactVirtualized__Table__rowColumn {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.error-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.error-list li {
+  margin-bottom: 4px;
+}
+
+.error-list li:last-child {
+  margin-bottom: 0;
+}

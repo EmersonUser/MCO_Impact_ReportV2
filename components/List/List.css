@@ -1,0 +1,51 @@
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  z-index: 11;
+  cursor: grab;
+}
+li p {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.list-text {
+  width: 110px; 
+  display: inline-block; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  vertical-align: middle; 
+  position: relative; 
+  z-index: 11;
+  cursor: pointer;
+}
+
+
+.description-container {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  z-index: 12;
+  cursor: pointer;
+}
+
+.drag-over + .card .list-text,
+.drag-over + .card .description-container {
+  z-index: 0;
+}
+
+@media (max-width: 400px) {
+  .list-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-group-item {
+    width: 100%;
+  }
+
+
+}

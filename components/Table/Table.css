@@ -1,0 +1,480 @@
+:root {
+  /* Text Colors */
+  --table-header-text: #343a40;
+  --table-cell-text: #212529;
+  --table-no-data-text: #495057;
+  --table-highlight-selcted-row-text: #0d6efd;
+
+
+  /* Background Colors */
+  --table-header-bg: #f2f2f2;
+  --table-row-hover-bg: #e0e0e0;
+  --table-selected-row-bg: #d5e8f2;
+  --table-fixed-column-bg: #f8f9fa;
+  --table-no-data-bg: #f8f9fa;
+  --table-scrollbar-track-bg: #f2f2f2;
+  --table-scrollbar-thumb-bg: #bfbfbf;
+  --table-scrollbar-thumb-hover-bg: #555;
+  --table-highlight-selcted-row-bg: #e2edfa;
+
+  /* Border Colors */
+
+  --table-header-border: #c5c7c8;
+  --table-pinned-border: #e0e0e0;
+  --table-resizer-hover: #ced4da;
+
+  /* Shadow Colors */
+  --table-shadow-rgba: rgba(0, 0, 0, 0.1);
+  --table-resizer-rgba: rgba(136, 124, 124, 0.5);
+}
+.wrapper-cta {
+  position: relative;
+  height: calc(100% - 154px);
+  width: 100%;
+  min-width: 100%;
+}
+.cta-absolute {
+  position: absolute;
+  left: 0;
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  position: relative;
+  height: calc(100% - 89px);
+  min-width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  font-size: 14px;
+  border-spacing: 0;
+  min-width: 100%;
+  table-layout: auto;
+}
+
+/* Table header styling */
+.custom-table th {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-table td {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+}
+
+.cell-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}
+.table-info{
+  font-size: medium;
+  padding: 0.5rem;
+}
+.table-info p{
+  color:#000000;
+}
+
+
+.custom-table.table {
+  margin-bottom: 0;
+}
+
+.custom-table th {
+  position: relative;
+}
+
+.custom-table thead th {
+  padding: 0px 9px;
+  position: relative;
+  color: var(--table-header-text);
+  border-bottom: 1px solid var(--table-header-border);
+  /* white-space: nowrap; */
+  text-align: left;
+  font-size: 13px;
+  background-color: var(--table-header-bg);
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+  user-select: none;
+  height: 42px;
+  vertical-align: middle;
+  text-wrap: wrap;
+}
+
+.custom-table thead th:hover {
+  background-color: var(--table-row-hover-bg);
+  cursor: pointer;
+}
+
+.custom-table thead th .resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+  background-color: transparent;
+}
+
+.custom-table thead th .resizer:hover {
+  background-color: var(--table-resizer-hover); /* Subtle hover effect */
+}
+
+/* Checkbox column styling */
+.custom-table thead th.is-fixed,
+.custom-table tbody td.is-fixed {
+  text-align: center;
+  width: 50px !important; /* Slightly larger width for checkbox column */
+}
+
+.custom-table tbody .row-selected td.is-pinned,
+.custom-table tbody .row-selected td {
+  background: var(--table-selected-row-bg);
+}
+
+/* .table > :not(caption) > * > * {
+  background-color: transparent;
+}
+.table > :not(caption) > * > * {
+  background-color: transparent;
+} */
+
+/* .custom-table thead{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+} */
+
+.custom-table thead th.is-pinned,
+.custom-table tbody td.is-pinned {
+  left: 45px !important;
+  /* z-index: 1; */
+  /* box-shadow: gray -4px 0px 4px -4px inset; */
+  /* background: #fff;  */
+  opacity: 0.95 !important;
+  border-right: 2px solid var(--table-row-hover-bg);
+}
+/* .custom-table tbody td.is-pinned{
+  z-index: 1 !important;
+  position: relative !important;
+  left: 0 !important;
+} */
+
+.custom-table tbody tr:hover {
+  background-color: var(--table-row-hover-bg);
+}
+
+.custom-table tbody td {
+  padding: 11px 16px;
+  text-align: left;
+  color: var(--table-cell-text);
+  vertical-align: middle;
+}
+
+.custom-table tbody td:first-child input {
+  cursor: pointer;
+}
+.custom-table tbody td:first-child {
+  background-color: var(--table-header-bg);
+}
+/* Highlight selected rows */
+.custom-table tbody tr.selected {
+  background-color: var(--table-highlight-selcted-row-bg);
+  color: var(--table-highlight-selcted-row-text);
+}
+
+/* Styling for "No Data" message */
+.custom-table .no-data {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--table-no-data-text);
+  padding: 20px;
+  background-color: var(--table-no-data-bg);
+}
+
+/* Scrollbar styling */
+/* For WebKit browsers (Chrome, Safari, newer Edge) */
+.table-responsive::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: var(--table-scrollbar-track-bg); /* Color of the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: var(--table-scrollbar-thumb-bg); /* Color of the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background-color: var(
+    --table-scrollbar-thumb-hover-bg
+  ); /* Darker color on hover */
+}
+
+/* For Firefox */
+.table-responsive {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: var(--table-scrollbar-thumb-bg)
+    var(--table-scrollbar-track-bg); /* thumb and track color */
+}
+
+/* icon sorting */
+/* Icon styling for the first column */
+.custom-table th .icon {
+  align-items: center;
+  display: inline-flex;
+  margin-left: 10px;
+  vertical-align: middle;
+  position: absolute;
+  right: 5px;
+}
+
+.input-cell {
+  border: none;
+  width: auto;
+  background: transparent !important;
+  /* padding: 0.375rem 0.75rem; */
+}
+
+/* Header content styles */
+.header-content {
+  padding: 4px 8px;
+  user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 47px;
+}
+
+/* Sort icon styling */
+.custom-table th .icon {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Sticky header styles */
+
+/* Sticky header with checkbox support */
+.custom-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--table-header-bg);
+}
+
+/* Checkbox column always visible */
+.custom-table thead th.is-fixed {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: var(--table-header-bg);
+}
+
+/* Regular header cells */
+.custom-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--table-header-bg);
+  z-index: 3;
+}
+
+/* Fixed column shadow */
+.custom-table th.is-fixed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--table-shadow-rgba) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Scroll shadow */
+.table-responsive.is-scrolled thead::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--table-shadow-rgba) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Header text container - exclude Selection column */
+th:not([data-fixed="true"]) .header-content .flex-grow-1 {
+  display: flex;
+  align-items: center;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+  min-width: 0;
+  max-width: calc(100% - 20px);
+  padding-right: 20px;
+  line-height: 1.2;
+}
+
+th[data-fixed="true"] .header-content .flex-grow-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Selection column specific styles */
+th[data-fixed="true"] .header-content {
+  justify-content: center;
+  padding: 4px;
+  height: 32px;
+}
+
+th[data-fixed="true"] .header-content .flex-grow-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dragging state */
+th:not([data-fixed="true"]) .header-content:active {
+  cursor: grabbing;
+}
+
+/* Sort icon styling - exclude Selection column */
+th:not([data-fixed="true"]) .icon {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Resizer */
+
+.Resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--table-resizer-rgba);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+/* Show Resier on hover for all columns */
+.Resizer:hover,
+.Resizer.isResizing {
+  background: var(--table-resizer-rgba);
+  opacity: 1;
+}
+
+/* Ensure proper z-index for fixed columns' Resizer */
+th[data-fixed="true"] .Resizer {
+  z-index: 3;
+}
+/* Add styles for fixed columns */
+th[data-fixed="true"],
+td[data-fixed="true"] {
+  background-color: var(--table-fixed-column-bg);
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+/* Responsive styling */
+
+@media (max-width: 767.98px) {
+  .custom-table {
+    font-size: 13px;
+  }
+
+  .custom-table thead th,
+  .custom-table tbody td {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-cta {
+    height: calc(100% - 250px);
+  }
+}
+@media (max-width: 576px) {
+  .wrapper-cta {
+    height: calc(100% - 370px);
+  }
+}
+
+
+@media (max-width: 500px) {
+  .cta-absolute {
+    position: relative;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-responsive {
+    overflow-x: scroll;
+  }
+
+  .custom-table thead th,
+  .custom-table tbody td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Media query for zoom levels */
+@media screen and (max-width: 100%) {
+  .table-responsive {
+    max-width: none;
+    overflow-x: auto;
+  }
+
+  .custom-table {
+    width: auto;
+    min-width: 100%;
+  }
+}
+
+
+

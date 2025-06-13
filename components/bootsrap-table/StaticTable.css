@@ -1,0 +1,49 @@
+.table-light {
+  font-size: small;
+}
+
+/* Header Styling */
+.header-styling {
+  background-color: #343a40 !important; /* Dark gray */
+  color: white !important;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Existing styles... */
+
+/* Style for disabled rows */
+.disabled-row {
+  background-color: #f0f0f0 !important; /* Light gray */
+  cursor: default; /* Default cursor */
+}
+
+/* Change cursor when hovering over disabled rows */
+.disabled-row:hover {
+  cursor: not-allowed;
+}
+
+
+/* Style for disabled table cells */
+.disabled-cell,
+.disabled-dropdown {
+  background-color: #e0e0e0 !important; /* Slightly darker gray */
+}
+
+/* Styling for disabled dropdown elements */
+.custom-select-disabled {
+  background-color: #d6d6d6 !important;
+  border-color: #bdbdbd !important;
+  color: #6c757d !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Wrapper for dropdown and icon */
+.dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
