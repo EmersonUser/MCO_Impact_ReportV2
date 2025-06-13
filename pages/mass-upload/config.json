@@ -1,0 +1,99 @@
+{
+  "widgetInfo": {
+    "source": "X3DSEAR_AP",
+    "version": "1.1"
+  },
+  "MassUpload": {
+    "Physical Product": {
+      "fileHeaders": [
+        "Type",
+        "Physical Product/Raw Material",
+        "Collaborative Space",
+        "Title",
+        "EIN Number",
+        "Description",
+        "Unit Of Measure",
+        "Ongoing Inspection Required",
+        "Item Catalog Category",
+        "MWP",
+        "Drawing Required",
+        "1st Article Required",
+        "Release Phase",
+        "Long Description"
+      ],
+      "mandatoryAttributes": [
+        "Type",
+        "Collaborative Space",
+        "EIN Number",
+        "Description",
+        "Unit Of Measure",
+        "Title"
+      ]
+    },
+    "Document": {
+      "fileHeaders": [
+        "Document Type",
+        "Collaborative Space",
+        "Title",
+        "Document Name",
+        "Description",
+        "PDF File Required",
+        "Agency Approval Review Required"
+      ],
+      "mandatoryAttributes": [
+        "Document Type",
+        "Collaborative Space",
+        "Title",
+        "Document Name",
+        "Description",
+        "PDF File Required"
+      ]
+    },
+    "Physical Product Structure": {
+      "fileHeaders": [
+        "Level",
+        "Type",
+        "EIN Number",
+        "Find Number",
+        "Release Phase",
+        "Change Controlled",
+        "Quantity",
+        "Unit Of Measure"
+      ],
+      "mandatoryAttributes": [
+        "Level",
+        "Type",
+        "EIN Number",
+        "Find Number",
+        "Release Phase",
+        "Change Controlled",
+        "Quantity",
+        "Unit Of Measure"
+      ]
+    },
+    "Physical Product-Document": {
+      "fileHeaders": [
+        "Part Type",
+        "EIN Number",
+        "Part Revision",
+        "New/Existing Document",
+        "Document Type",
+        "Document Name",
+        "Document Description",
+        "PDF File Required",
+        "Relationship Type"
+      ],
+      "mandatoryAttributes": [
+        "Part Type",
+        "EIN Number",
+        "Part Revision",
+        "New/Existing Document",
+        "Document Type",
+        "Document Name",
+        "Document Description",
+        "PDF File Required",
+        "Relationship Type"
+      ]
+    }
+  }
+}
