@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+VIC+Guides&display=swap');
+
+
+html, body {
+    /* min-height: 332px; */
+    font-family: "Open Sans", serif !important;
+}
+.home-icon{
+    cursor: pointer;
+    height: auto;
+    width: 30px;
+    margin: 10px;
+    position: relative;
+    z-index: 12;
+}
+
+
+/* Latest Child Connected Tick styilng */
+
+.green-icon {
+    color: rgb(45, 194, 20);
+  }
+
+  .cross-icon{
+    color: #ed0c0c;
+  }
+  
+.no-data-banner{
+  font: caption  !important;;
+  margin: 7px;
+}
